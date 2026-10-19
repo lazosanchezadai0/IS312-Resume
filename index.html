@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adai Lazo Sanchez - Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="pic_resume.jpg" alt="Profile Picture">
+        <h1>Adai Lazo Sanchez</h1>
+        <p>Information Technology Student</p>
+    </header>
+
+    <main>
+        <section class="acordian">
+            <h2>Experience</h2>
+
+            <details class="acordian-item">
+                <summary>Landscaping</summary>
+                <p>Independent Landscaping (2024 - Present)</p>
+                <p>Responsibilities:</p>
+                <ul>
+                    <li>Assisted with lawn care, trimming, and landscaping tasks.</li>
+                    <li>Maintained outdoor areas and organized equipment.</li>
+                </ul>
+            </details>
+        </section>
+
+        <section class="acordian" id="skills">
+            <h2>Skills</h2>
+
+            <details class="acordian-item">
+                <summary>Skills</summary>
+                <table>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Proficiency</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Linux</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Troubleshooting</td>
+                        <td>Intermediate</td>
+                    </tr>
+                </table>
+            </details>
+        </section>
+
+        <section class="acordian" id="education">
+            <h2>Education</h2>
+
+            <details class="acordian-item">
+                <summary>City University of Seattle</summary>
+                <p>Bachelor's Degree Studies</p>
+                <p>Information Technology and Computing</p>
+                <p>Currently Enrolled</p>
+            </details>
+        </section>
+    </main>
+
+    
+    <footer>
+        <h3>Contact</h3>
+        <p>
+            <a href="mailto:lazosanchezadai@gmail.com">
+            📧 lazosanchezadai@gmail.com
+            </a>
+            <a href="tel:+14255020826">
+            📞 (425) 502-0826
+            </a>
+        </p>
+        <p>
+            <a href="https://github.com/lazosanchezadai0"
+           target="_blank" rel="noopener noreferrer">
+            GitHub
+            </a>
+        </p>
+        <p>&copy; 2026 Adai Lazo Sanchez. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        // Allow only one accordion item open per section.
+        document.querySelectorAll('.acordian').forEach(section => {
+            section.addEventListener('click', e => {
+                if (e.target.tagName.toLowerCase() === 'summary') {
+                    const clicked = e.target.parentElement;
+                    section.querySelectorAll('details.acordian-item')
+                        .forEach(d => {
+                            if (d !== clicked) d.removeAttribute('open');
+                        });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

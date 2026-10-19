@@ -1,6 +1,9 @@
 :root{
-  --bg: #f7f9fb;
-  --muted: #666;
+  --bg: #f4f7fb;
+  --navy: #123b66;
+  --blue: #1f5f99;
+  --light-blue: #eaf3fb;
+  --muted: #5b6875;
 }
 
 *{box-sizing:border-box}
@@ -8,7 +11,7 @@ body{
   margin:0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background:var(--bg);
-  color:#222;
+  color:#243447;
   display:flex;
   flex-direction:column;
   min-height:100vh;
@@ -19,7 +22,7 @@ header{
   position:relative;
   height:220px;
   background:#fff;
-  border-bottom:1px solid #e6e6e6;
+  border-bottom:3px solid var(--blue);
   overflow:hidden;
 }
 
@@ -46,6 +49,7 @@ header h1{
   font-size:1.6rem;
   font-weight:600;
   text-align:center;
+  color:var(--navy);
 }
 
 /* Title centered below the name */
@@ -81,7 +85,7 @@ main{
   margin:20px auto;
   padding:20px;
   background:#fff;
-  border:1px solid #e6e6e6;
+  border:1px solid #d9e3ef;
   border-radius:8px;
   box-shadow:0 8px 24px rgba(0,0,0,0.04);
   flex:1;
@@ -98,17 +102,21 @@ main{
   display:block;
   padding:12px 16px;
   border-radius:6px;
-  background:linear-gradient(180deg, #ffffff, #fbfdff);
-  border:1px solid transparent;
+  background:var(--light-blue);
+  border:1px solid #c7dced;
   margin:8px 0;
   cursor:pointer;
-  transition:box-shadow .2s, border-color .2s;
+  transition:background-color .2s, box-shadow .2s, border-color .2s;
+}
+
+.acordian-item:hover{
+  border-color:#9bbbd8;
 }
 
 /* When open, allow natural flow and add elevation */
 .acordian-item[open]{
-  box-shadow:0 8px 22px rgba(0,0,0,0.06);
-  border-color:#e6eaf0;
+  box-shadow:0 6px 16px rgba(18,59,102,0.1);
+  border-color:var(--blue);
 }
 
 /* Style the summary row */
@@ -122,6 +130,13 @@ main{
   font-size:1.05rem;
   margin:0;
   padding:0;
+  color:var(--navy);
+}
+
+.acordian-item summary:focus-visible{
+  outline:2px solid var(--blue);
+  outline-offset:4px;
+  border-radius:2px;
 }
 
 /* Remove native marker and add simple indicator */
@@ -156,7 +171,36 @@ main{
 .acordian > h2{
   margin:0 0 8px 0;
   font-size:1.15rem;
-  color:#333;
+  color:var(--navy);
+}
+
+#skills table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+  border:1px solid #a9c1d8;
+}
+
+#skills th,
+#skills td{
+  padding:10px 12px;
+  border:1px solid #a9c1d8;
+  text-align:left;
+}
+
+#skills th{
+  background:var(--navy);
+  color:#fff;
+}
+
+#skills tbody tr:nth-child(even),
+#skills table > tr:nth-child(even){
+  background:#f4f8fc;
+}
+
+#skills tbody tr:nth-child(odd),
+#skills table > tr:nth-child(odd):not(:first-child){
+  background:#fff;
 }
 
 /* Footer with contact information */
@@ -166,7 +210,7 @@ footer{
   margin-top: auto;
   padding:20px;
   background:#fff;
-  border:1px solid #e6e6e6;
+  border:1px solid #d9e3ef;
   border-radius:8px;
   text-align:center;
   color:var(--muted);
@@ -176,18 +220,18 @@ footer{
 footer h3{
   margin:0 0 12px 0;
   font-size:1rem;
-  color:#333;
+  color:var(--navy);
 }
 
 footer a{
-  color:#0366d6;
+  color:var(--blue);
   text-decoration:none;
   margin:0 8px;
   transition:color .2s;
 }
 
 footer a:hover{
-  color:#0256c7;
+  color:var(--navy);
   text-decoration:underline;
 }
 
@@ -211,18 +255,18 @@ footer{
 footer h3{
   margin:0 0 6px 0;
   font-size:0.95rem;
-  color:#333;
+  color:var(--navy);
 }
 
 footer a{
-  color:#0366d6;
+  color:var(--blue);
   text-decoration:none;
   margin:0 6px;
   transition:color .2s;
 }
 
 footer a:hover{
-  color:#0256c7;
+  color:var(--navy);
   text-decoration:underline;
 }
 
